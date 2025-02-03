@@ -1,0 +1,130 @@
+/* Global styles */
+html, body {
+    height: 100%;           
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('../images/attack-of-the-clones.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #e0e0e0;
+    display: block;         
+    overflow-y: auto;
+}
+
+.grid-con {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    height: auto;
+}
+
+section {
+    background: #242424;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    overflow: visible;
+    height: auto;
+    margin-top: 16px;
+}
+
+h2 {
+    color: #f5c518;
+    font-size: 24px;
+    text-align: center;
+    background-color: #242424;
+    padding: 12px;
+    margin: 0 0 16px 0;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+#movie-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#movie-box li {
+    margin: 10px 0;
+}
+
+#movie-box a {
+    color: #bb86fc;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+#movie-box a:hover {
+    color: #f5c518;
+}
+
+#review-con {
+    margin-top: 20px;
+    text-align: center;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.review-heading {
+    font-size: 22px;
+    font-weight: bold;
+    color: #03dac6;
+    margin-bottom: 12px;
+}
+
+.review-description {
+    font-size: 16px;
+    font-style: italic;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.movie-poster {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .grid-con {
+        grid-template-columns: 1fr;  /* Stack sections on smaller screens */
+    }
+
+    section {
+        flex: 1 1 auto;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .review-heading {
+        font-size: 18px;
+    }
+
+    .review-description {
+        font-size: 14px;
+    }
+}
